@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="counter_style.css">
+	<title></title>
+</head>
+<body>
+	<header>
+		<div class="details">
+			<ul>
+			    <li><a href="#project_description">description</a></li>
+			    <li><a href="#apparatus">apparatus</a></li>
+			    <li><a href="#circuit_diagram_and_code">circuit</a></li>
+			    <li><a href="#circuit_diagram_and_code">code</a></li>
+			    <li><a href="#working_video_and_working">video</a></li>
+			    <li><a href="#working_video_and_working">working</a></li>
+		    </ul>
+		    <div>
+			    <h1>Person Counter and Appliance Control</h1>
+		    </div>
+		</div>
+	</header>
+	<main>
+		<div class="name">Person Counter and<br> Appliance Control</div>
+		<section id="project_description">
+			<div>
+				<h1 class="heading">project description</h1>
+			</div>
+			<div class="fo">
+				This is a power conservation project besides it will keep the track of number of people who are entering and who are leaving. This prototype is kept at any entrance of a room so, that it can keep the track of count of people who are entering and leaving the room through that entrance.Not only the count but also controls the appliances of the room according to the count. when the count is above zero it switch on the appliances and when the count is zero it will off the appliances of the room(particularly the appliances which are connected to the prototype).
+			</div>
+		</section>
+		<section id="apparatus">
+			<div>
+				<h1 class="heading">apparatus</h1>
+			</div>
+			<div class="item">
+				<div class="item_name item1"></div>
+				<div class="item_description">
+					<div>IR SENSOR</div>
+					<p class="fo">IR sensor is an electronic device, that emits the light in order to sense some object of the surroundings. An IR sensor can measure the heat of an object as well as detects the motion. Usually, in the infrared spectrum, all the objects radiate some form of thermal radiation. These types of radiations are invisible to our eyes, but infrared sensor can detect these radiations.</p>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_description">
+					<div>ARDUINO</div>
+					<p class="fo">Arduino board designs use a variety of microprocessors and controllers. The boards are equipped with sets of digital and analog input/output (I/O) pins that may be interfaced to various expansion boards ('shields') or breadboards (for prototyping) and other circuits. The boards feature serial communications interfaces, including Universal Serial Bus (USB) on some models, which are also used for loading programs. The microcontrollers can be programmed using the C and C++ programming languages, using a standard API which is also known as the Arduino language, inspired by the Processing language and used with a modified version of the Processing IDE. In addition to using traditional compiler toolchains, the Arduino project provides an integrated development environment (IDE) and a command line tool developed in Go.</p>
+				</div>
+				<div class="item_name item2"></div>
+			</div>
+			<div class="item">
+				<div class="item_name item3"></div>
+				<div class="item_description">
+				<div>LCD DISPLAY</div>
+				<p class="fo">In LCD 16×2, the term LCD stands for Liquid Crystal Display that uses a plane panel display technology, used in screens of computer monitors & TVs, smartphones, tablets, mobile devices, etc. Both the displays like LCD & CRTs look the same but their operation is different. Instead of electrons diffraction at a glass display, a liquid crystal display has a backlight that provides light to each pixel that is arranged in a rectangular network.<br>
+					An electronic device that is used to display data and the message is known as LCD 16×2. As the name suggests, it includes 16 Columns & 2 Rows so it can display 32 characters (16×2=32) in total & every character will be made with 5×8 (40) Pixel Dots. So the total pixels within this LCD can be calculated as 32 x 40 otherwise 1280 pixels.
+				</p>
+				</div>
+			</div>
+			<div class="item">
+				
+				<div class="item_description">
+					<div>BREAD BOARD</div>
+				<p class="fo">A breadboard, solderless breadboard, protoboard, or terminal array board is a construction base used to build semi-permanent prototypes of electronic circuits. Unlike stripboard (Veroboard), breadboards do not require soldering or destruction to tracks and are hence reusable. For this reason, breadboards are also popular with students and in technological education.<br>
+				The emitter is simply an IR LED (Light Emitting Diode) and the detector is simply an IR photodiode . Photodiode is sensitive to IR light of the same wavelength which is emitted by the IR LED. When IR light falls on the photodiode, the resistances and the output voltages will change in proportion to the magnitude of the IR light received.</p>
+			    </div>
+			    <div class="item_name item4"></div>
+			</div>
+			<div class="item">
+				<div class="item_name item5"></div>
+				<div class="item_description">
+					<div>LED</div>
+					<p class="fo">A light-emitting diode (LED) is a semiconductor light source that emits light when current flows through it. Electrons in the semiconductor recombine with electron holes, releasing energy in the form of photons (Energy packets). The color of the light (corresponding to the energy of the photons) is determined by the energy required for electrons to cross the band gap of the semiconductor.[5] White light is obtained by using multiple semiconductors or a layer of light-emitting phosphor on the semiconductor device.</p>
+				</div>
+			</div>
+			<div class="item">
+				
+				<div class="item_description">
+					<div>JUMPER WIRES</div>
+					<p class="fo">A jump wire (also known as jumper, jumper wire, DuPont wire) is an electrical wire, or group of them in a cable, with a connector or pin at each end (or sometimes without them – simply "tinned"), which is normally used to interconnect the components of a breadboard or other prototype or test circuit, internally or with other equipment or components, without soldering.</p>
+				</div>
+				<div class="item_name item6"></div>
+			</div>
+		</section>
+		<section id="circuit">
+			<h1 class="heading">circuit diagram and code</h1>
+			<div id="circuit_diagram_and_code">
+			<div class="circuit_diagram">
+			</div>
+			<div class="code">
+				<h1>code</h1>
+				<p>
+					#include<LiquidCrystal.h><br>
+LiquidCrystal lcd(2,3,7,6,5,4);<br>
+
+#define in 8<br>
+#define out 9<br>
+#define led 10<br>
+
+int count=0;<br>
+
+void setup()<br>
+{<br>
+  lcd.begin(16,2);<br>
+  lcd.print("Visitor Counter");<br>
+  delay(2000);<br>
+  pinMode(in, INPUT);<br>
+  pinMode(out, INPUT);<br>
+  pinMode(led, OUTPUT);<br>
+  lcd.clear();<br>
+  lcd.print("Person In Room:");<br>
+  lcd.setCursor(0,1);<br>
+  lcd.print(count);<br>
+}<br>
+
+void loop()<br>
+{  <br>
+  int in_value = digitalRead(in);<br>
+  int out_value = digitalRead(out);<br>
+  if(in_value == LOW)<br>
+  {<br>
+    count++;<br>
+    lcd.clear();<br>
+    lcd.print("Person In Room:");<br>
+    lcd.setCursor(0,1);<br>
+    lcd.print(count);<br>
+    delay(1000);<br>
+  }<br>
+  
+  if(out_value == LOW)<br>
+  {<br>
+    count--;<br>
+    lcd.clear();<br>
+    lcd.print("Person In Room:");<br>
+    lcd.setCursor(0,1);<br>
+    lcd.print(count);<br>
+    delay(1000);<br>
+  }<br>
+ 
+  
+  if(count==0)<br>
+  {<br>
+    lcd.clear();<br>
+    digitalWrite(led, LOW);<br>
+    lcd.clear();<br>
+    lcd.print("Nobody In Room");<br>
+    lcd.setCursor(0,1);<br>
+    lcd.print("Light is Off");<br>
+    delay(200);<br>
+  }<br>
+  
+  else<br>
+  {<br>
+    digitalWrite(led, HIGH);<br>
+  }<br>
+}<br>
+				</p>
+			</div>
+			</div>
+		</section>
+		<section id="working">
+			<h1 class="heading">working</h1>
+			<div id="working_video_and_working">
+			<div class="videos">
+				<video controls height="300" width="400">
+			        <source src="videos/counter_video.mp4" type="video/mp4">
+				       browser doesn't support video format
+		        </video>
+			</div>
+			<div class="working_text">
+				<p class="fo">
+					Here in this video consider my hand as a person, whenever a person enters the count increases and it is displayed on the lcd along with that the led beside that is automatically turns on. When the count equals to zero the led will be turned off.<br>
+					IR sensor sends the measured values to the processor(arduino), according to these values it counts people. As you can see I have placed two IR sensors in the prototype, one to detect number of people who are entering and other is to detect the number of people who are leaving. When one sensor detects something then until few seconds the other sensor won't measure anything, this helps to avoid the problem of both measuring. If both measures then what happens is one will increase the count and other will decrease the count at a time as they are places one after other, This will never increase the count. In this manner the variable count is incremented and decremented accordingly. When ever this count will be zero, then the appliances which are connected to processor will loose their power supply so, they will be automatically turnedoff. when ever this count increases they will get their power supply back and they will be turned on.
+				</p>
+			</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

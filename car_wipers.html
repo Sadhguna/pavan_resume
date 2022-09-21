@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="wipers_style.css">
+	<title></title>
+</head>
+<body>
+	<header>
+		<div class="details">
+			<ul>
+			    <li><a href="#project_description">description</a></li>
+			    <li><a href="#apparatus">apparatus</a></li>
+			    <li><a href="#circuit_diagram_and_code">circuit</a></li>
+			    <li><a href="#circuit_diagram_and_code">code</a></li>
+			    <li><a href="#working_video_and_working">video</a></li>
+			    <li><a href="#working_video_and_working">working</a></li>
+		    </ul>
+		    <div>
+			    <h1>Automatic Rain Sensing Wipers</h1>
+		    </div>
+		</div>
+	</header>
+	<main>
+		<div class="name">Automatic Rain <br>Sensing Wipers</div>
+		<section id="project_description">
+			<div>
+				<h1 class="heading">project description</h1>
+			</div>
+			<div class="fo">
+				Automatic rain sensing wipers is a social relevant project .It reduces the man power and makes the things automatic. While travelling when ever there is rain ,the vehicle automatically responds and starts the wipers. It automatically adjusts the speed of the wipers according to the intensity of the rain, for drivers there is no need to on any further switches to on the wipers.
+			</div>
+		</section>
+		<section id="apparatus">
+			<div>
+				<h1 class="heading">apparatus</h1>
+			</div>
+			<div class="item">
+				<div class="item_name item1"></div>
+				<div class="item_description">
+					<div>SERVO MOTOR</div>
+					<p class="fo">
+						Servo motors or “servos”, as they are known, are electronic devices and rotary or linear actuators that rotate and push parts of a machine with precision. Servos are mainly used on angular or linear position and for specific velocity, and acceleration.In other words, servo motors get their name from the fact that they can be relied upon to operate "exactly as commanded". Any electric motor capable of controlling parameters like position and speed is called a servo motor, regardless of how this control is achieved.
+					</p>
+				</div>
+			</div>
+			<div class="item">
+				
+				<div class="item_description">
+					<div>ARDUINO</div>
+					<p class="fo">
+						Arduino board designs use a variety of microprocessors and controllers. The boards are equipped with sets of digital and analog input/output (I/O) pins that may be interfaced to various expansion boards ('shields') or breadboards (for prototyping) and other circuits. The boards feature serial communications interfaces, including Universal Serial Bus (USB) on some models, which are also used for loading programs. The microcontrollers can be programmed using the C and C++ programming languages, using a standard API which is also known as the Arduino language, inspired by the Processing language and used with a modified version of the Processing IDE. In addition to using traditional compiler toolchains, the Arduino project provides an integrated development environment (IDE) and a command line tool developed in Go.
+					</p>
+				</div>
+				<div class="item_name item2"></div>
+			</div>
+			<div class="item">
+				<div class="item_name item3"></div>
+				<div class="item_description">
+					<div>RAIN SENSOR</div>
+					<p class="fo">The rain sensor module is an easy tool for rain detection. It can be used as a switch when raindrop falls through the raining board and also for measuring rainfall intensity.The rain sensor module/board is shown below. Basically, this board includes nickel coated lines and it works on the resistance principle. This sensor module permits to gauge moisture through analog output pins & it gives a digital output while moisture threshold surpasses.</p>
+				</div>
+			</div>
+			<div class="item">
+				
+				<div class="item_description">
+					<div>BREAD BOARD</div>
+					<p class="fo">A breadboard, solderless breadboard, protoboard, or terminal array board is a construction base used to build semi-permanent prototypes of electronic circuits. Unlike stripboard (Veroboard), breadboards do not require soldering or destruction to tracks and are hence reusable. For this reason, breadboards are also popular with students and in technological education.<br>
+				The emitter is simply an IR LED (Light Emitting Diode) and the detector is simply an IR photodiode . Photodiode is sensitive to IR light of the same wavelength which is emitted by the IR LED. When IR light falls on the photodiode, the resistances and the output voltages will change in proportion to the magnitude of the IR light received.</p>
+				</div>
+				<div class="item_name item4"></div>
+			</div>
+			<div class="item">
+				<div class="item_name item5"></div>
+				<div class="item_description">
+					<div>JUMPER WIRES</div>
+					<p class="fo">A jump wire (also known as jumper, jumper wire, DuPont wire) is an electrical wire, or group of them in a cable, with a connector or pin at each end (or sometimes without them – simply "tinned"), which is normally used to interconnect the components of a breadboard or other prototype or test circuit, internally or with other equipment or components, without soldering.</p>
+				</div>
+			</div>
+		</section>
+		<section id="circuit">
+			<h1 class="heading">circuit diagram and code</h1>
+			<div id="circuit_diagram_and_code">
+			<div class="circuit_diagram">
+			</div>
+			<div class="code">
+				<h1>code</h1>
+				<p>
+					#include<Servo.h><br>
+Servo myservo;<br>
+Servo myservo1;<br>
+
+int pos = 0;<br>
+int sensorValue = 0;<br>
+void setup() {<br>
+  // put your setup code here, to run once:<br>
+  pinMode(11, OUTPUT);<br>
+  Serial.begin(9600);<br>
+  myservo.attach(9);<br>
+  myservo1.attach(10);<br>
+}<br>
+
+void loop() {<br>
+  // put your main code here, to run repeatedly:<br>
+ sensorValue = analogRead(A0);<br>
+ Serial.println(sensorValue);<br>
+ if(sensorValue>550){<br>
+  digitalWrite(11, LOW);<br>
+  myservo.write(0);<br>
+  myservo1.write(0);<br>
+  delay(1000);<br>
+ }<br>
+ if(sensorValue<=550 && sensorValue>450){<br>
+  digitalWrite(11, HIGH);<br>
+  for (pos = 0; pos <=120; pos+=1)<br>
+  {<br>
+    myservo.write(pos);<br>
+    myservo1.write(pos);<br>
+    delay(3);<br>
+  }<br>
+  for (pos = 120; pos >=0; pos-=1)<br>
+  {<br>
+  myservo.write(pos);<br>
+  myservo1.write(pos);<br>
+  delay(3);<br>
+  }<br>
+  delay(2000);<br>
+ }<br>
+ if(sensorValue<=500 && sensorValue>250)<br>
+ {<br>
+   
+  for (pos = 0; pos <= 120; pos+=1)<br>
+  {<br>
+    myservo.write(pos);<br>
+    myservo1.write(pos);<br>
+    delay(3);<br>
+  }<br>
+  for (pos = 120; pos >= 0; pos-=1)<br>
+  {<br>
+    myservo.write(pos);<br>
+    myservo1.write(pos);<br>
+    delay(3);<br>
+  }<br>
+  delay(00);<br>
+ }<br>
+ if(sensorValue<250){<br>
+  for (pos = 0; pos <=120; pos+=1)<br>
+  {<br>
+    myservo.write(pos);<br>
+    myservo1.write(pos);<br>
+    delay(3);<br>
+  }<br>
+  for (pos = 120; pos >=0; pos-=1)<br>
+  {<br>
+    myservo.write(pos);<br>
+    myservo1.write(pos);<br>
+    delay(3);<br>
+  }<br>
+  delay(100);<br>
+ }<br>
+}<br>
+				</p>
+			</div>
+			</div>
+		</section>
+		<section id="working">
+			<h1 class="heading">working</h1>
+			<div id="working_video_and_working">
+			<div class="videos">
+				<video controls height="300" width="400">
+			        <source src="videos/wipers_video1.mp4" type="video/mp4">
+				       browser doesn't support video format
+		        </video>
+			</div>
+			<div class="working_text">
+				<p class="fo">
+					Before knowing the working of the prototype, we should know the working of the rain sensor .It works on the principle of resistance because it is a resistive dipole. It reads the analog values and gives digital output. when the sensor is dry it shows more resistance but when it is wet it shows less resistance .According to this values we are going to control the speed of the wipers.This sensor is kept on the front wind shield of any vehicle, when ever it senses rain drops ,automatically it sends digital values through rain module to the processor(arduino) ,according to those values the wipers which are connected to the sevo motor will react .The speed of the servo motor is set according to the intensity of the rain and all this is managed inside the code ,the speed of the wipers is varied according to the digital values.
+				</p>
+			</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

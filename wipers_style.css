@@ -1,0 +1,225 @@
+section{
+	display: flex;
+	flex-direction: column;
+}
+section:nth-child(2n+1){	
+	background-color: lightgrey;
+}
+#project_description div{
+	width: auto;
+	height: auto;
+	text-align: justify;
+	padding: 10px;
+}
+.name{
+	height: auto;
+	width: auto;
+	box-shadow: 3px 3px 2px 2px;
+	border-radius: 3px;
+	font-weight: bold;
+	font-size: 1rem;
+	color: black;
+	position: fixed;
+	top: 50%;
+	right: 0;
+}
+.name:hover{
+	background-color: white;
+}
+.heading{
+	font-size: 2.5rem;
+	text-align: center;
+}
+header{
+	background-image: url(images/wipers_photo.jpg);
+	text-align: center;
+	background-size: cover;
+	width: 100%;
+	height: 90vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.details {
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: inherit;
+    width: 97vw;
+    color: transparent;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.details h1{
+	margin-top: 30vh;
+	font-size: 100px;
+}
+header:hover .details {
+    background-color: #80808078;
+    color: white;
+    width: 100%;
+}
+header:hover a{
+    color: white;
+}
+header a:hover{
+	transition: 2s;
+	border-bottom: 2px solid gray;
+	color: grey;
+}
+li{
+	display: inline-block;
+	padding-left: 1rem;
+	list-style: none;
+}
+li a{
+    font-weight: 100;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: transparent;
+}
+#apparatus{
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
+	width: auto;
+	text-align: center;
+}
+.item{
+	display: flex;
+	text-align: center;
+	flex-direction: row;
+	width: 90%;
+	padding: 10px;
+	margin: 10px 20px 10px 30px;
+	border-radius: 7px;
+	box-shadow: 0px 0px 6px 1px black;
+}
+.item_name{
+	width: 20%;
+	margin: 10px;
+	height: 30vh;
+	box-shadow: 0px 0px 10px 2px black inset;
+	border-radius: 7px;
+}
+.item1{
+	background-image: url(images/Servo-Motor.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.item1:hover{
+	transform: scale(1.3);
+	box-shadow: 0 0 20px black;
+	z-index: 3;
+}
+.item2{
+	background-image: url(images/arduino.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.item2:hover{
+	transform: scale(1.3);
+	box-shadow: 0 0 20px black;
+	z-index: 3;
+}
+.item3{
+	background-image: url(images/rainsensor.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.item3:hover{
+	transform: scale(1.3);
+	box-shadow: 0 0 20px black;
+	z-index: 3;
+}
+.item4{
+	background-image: url(images/breadboard.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.item4:hover{
+	transform: scale(1.3);
+	box-shadow: 0 0 20px black;
+	z-index: 3;
+}
+.item5{
+	background-image: url(images/jumperwires.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.item5:hover{
+	transform: scale(1.3);
+	box-shadow: 0 0 20px black;
+	z-index: 3;
+}
+.item_description{
+	width: 70%;
+	margin: 10px;
+	height: auto;
+	position: relative;
+	text-align: justify;
+}
+/*circuit diagram and code*/
+
+#circuit{
+	text-align: center;
+}
+#circuit_diagram_and_code{
+	display: flex;
+	flex-direction: row;
+	height: 80vh;
+}
+.circuit_diagram{
+	background-image: url(images/car_wipers_circuit.png);
+	height: 80%;
+	width: 60%;
+	margin: 10px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	border-radius: 8px;
+	box-shadow: 0px 0px 6px 1px black ;
+}
+.code{
+	text-align: center;
+	background-color: white;
+	height: 80%;
+	width: 35%;
+	margin: 10px;
+	overflow: scroll;
+}
+#circuit p{
+	text-align: left;
+	font-size: 20px;
+}
+#working_video_and_working{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+#working{
+	text-align: center;
+}
+.working_text{
+	text-align: justify;
+	height: 50vh;
+	width: 50%;
+	margin: 10px;
+	margin: 10px;
+}
+.videos{
+	height: 50vh;
+	width: 30%;
+	margin: 10px;
+	text-align: center;
+}
+.item_description div{
+	color:  #2857a4;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+.fo{
+	font-family: serif;
+	font-size: 1.3rem;
+}
