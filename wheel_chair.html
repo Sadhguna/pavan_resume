@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="wheel_chair.css">
+	<title></title>
+</head>
+<body>
+	<header>
+		<div class="details">
+			<ul>
+			    <li><a href="#project_description">description</a></li>
+			    <li><a href="#apparatus">apparatus</a></li>
+			    <li><a href="#circuit_diagram_and_code">circuit</a></li>
+			    <li><a href="#circuit_diagram_and_code">code</a></li>
+			    <li><a href="#working_video_and_working">video</a></li>
+			    <li><a href="#working_video_and_working">working</a></li>
+		    </ul>
+		    <div>
+			    <h1>Voice Controlled Smart Wheelchair for physically Disabled People</h1>
+		    </div>
+		</div>
+	</header>
+	<main>
+		<div class="name">Voice controlled smart wheelchair<br>for physically disabled people</div>
+		<section id="project_description">
+			<div>
+				<h1 class="heading">project description</h1>
+			</div>
+			<div class="fo">
+				The primary purpose of a wheelchair is to carry older people and those with physical limitations who cannot move independently due to frailty.
+				 These wheelchairs can be manually or electrically driven; basic electric wheelchairs can be driven by joystick and voice commands, 
+				 but people suffering from quadriplegia can't operate the wheelchair through a joystick. Our designed wheelchair is used through voice commands. 
+				 The wheelchair we designed includes an automatic obstacle detection system with an ultrasonic sensor. If the person is in a fire accident, 
+				 the sensor detects the fire and sends notifications to a caretaker. This wheelchair will also monitor the person's health condition, like heart rate,
+				  internal body temperature, and blood oxygen level. We incorporated a MAX30100 pulse oximeter heart rate sensor to determine heart rate and blood oxygen levels.
+				   We can determine the interior body temperature with an LM35 sensor. If the pulse and body temperature are not in normal conditions, 
+				   it will send notifications and alerts to their caretakers using the Blynk app. In every fire mishap, an IR flame sensor module detects the fire. 
+				   The person in the wheelchair can automatically control the room appliances by the commands provided by the user through the RF transmitter and receiver module. 
+				   Therefore, the evolved health monitoring and alerting smart wheelchairs can help the physically disabled and older people
+			</div>
+		</section>
+		<section id="apparatus">
+			<div>
+				<h1 class="heading">apparatus</h1>
+			</div>
+			<div class="item">
+				<div class="item_name item1"></div>
+				<div class="item_description">
+					<div>ARDUINO BOARD</div>
+					<p class="fo">
+						Arduino board designs use a variety of microprocessors and controllers. The boards are equipped with sets of digital and analog input/output (I/O) pins that may be interfaced to various expansion boards ('shields') or breadboards (for prototyping) and other circuits. The boards feature serial communications interfaces, including Universal Serial Bus (USB) on some models, which are also used for loading programs. The microcontrollers can be programmed using the C and C++ programming languages, using a standard API which is also known as the Arduino language, inspired by the Processing language and used with a modified version of the Processing IDE. In addition to using traditional compiler toolchains, the Arduino project provides an integrated development environment (IDE) and a command line tool developed in Go.
+					</p>
+				</div>
+			</div>
+			<div class="item">
+			    <div class="item_description">
+				    <div>NODE MCU</div>
+					    <p class="fo">
+						    NodeMCU ESP8266. NodeMCU is an open-source Lua based firmware and development board specially targeted for IoT based Applications. It includes firmware that runs on the ESP8266 Wi-Fi SoC from Espressif Systems, and hardware which is based on the ESP-12 module.
+					    </p>
+				    </div>
+				<div class="item_name item2"></div>
+			</div>
+			<div class="item">
+				<div class="item_name item3"></div>
+				<div class="item_description">
+					<div>VOICE RECOGNITION MODULE</div>
+					<p class="fo">Voice Recognition Module is a compact easy-control speaking recognition board. It is a speaker-dependent module and supports up to 80 voice commands.</p>
+				</div>
+			</div>
+			<div class="item">		
+				<div class="item_description">
+					<div>ULTRASONIC SENSOR</div>
+					<p class="fo">An ultrasonic sensor is an electronic device that measures the distance of a target object by emitting ultrasonic sound waves, and converts the reflected sound into an electrical signal. Ultrasonic waves travel faster than the speed of audible sound</p>
+				</div>
+				<div class="item_name item4"></div>
+			</div>
+			<div class="item">
+				<div class="item_name item5"></div>
+				<div class="item_description">
+					<div>JUMPER WIRES</div>
+					<p class="fo">A jump wire (also known as jumper, jumper wire, DuPont wire) is an electrical wire, or group of them in a cable, with a connector or pin at each end (or sometimes without them – simply "tinned"), which is normally used to interconnect the components of a breadboard or other prototype or test circuit, internally or with other equipment or components, without soldering.</p>
+				</div>
+			</div>
+            <div class="item">
+				<div class="item_description">
+					<div>LM35 SENSOR</div>
+					<p class="fo">LM35 is a temperature measuring device having an analog output voltage proportional to the temperature. It provides output voltage in Centigrade (Celsius). It does not require any external calibration circuitry. The sensitivity of LM35 is 10 mV/degree Celsius. As temperature increases, output voltage also increases.</p>
+				</div>
+				<div class="item_name item6"></div>
+			</div>
+            <div class="item">
+				<div class="item_name item7"></div>
+				<div class="item_description">
+					<div>FLAME SENSOR</div>
+					<p class="fo">A flame sensor is a crucial safety component on your gas heating system. During the ignition cycle, your gas furnace goes through a process where a spark or a hot surface ignitor will actually ignite the gas. As the gas is ignited, the flame sensor creates a current of electricity.</p>
+				</div>
+			</div>
+            <div class="item">
+				<div class="item_description">
+					<div>PULSE OXIMETER HEART RATE SENSOR</div>
+					<p class="fo">A pulse oximeter is a non-invasive device that measures the oxygen saturation of a person's blood as well as their heart rate. Pulse oximeters are easily recognized by their associated clip-type probe, which is typically applied to a patient's finger. With each heart-beat there will be an increase in blood volume in the finger this will result in more light reflection back to the sensor. Hence if we see the waveform of the received light signal it will consist of peaks at each heartbeat.</p>
+				</div>
+				<div class="item_name item8"></div>
+			</div>
+            <div class="item">
+				<div class="item_name item9"></div>
+				<div class="item_description">
+					<div>DC MOTORS</div>
+					<p class="fo">Motor drivers acts as an interface between the motors and the control circuits. Motor require high amount of current whereas the controller circuit works on low current signals. So the function of motor drivers is to take a low-current control signal and then turn it into a higher-current signal that can drive a motor.The main function of a motor driver is to provide enough electrical power to the motor to gain torque, speed as per requirement.
+                        Motor Driver can control the direction of rotation of the motor.Motor drivers can control the speed of the motor.</p>
+				</div>
+			</div>
+            <div class="item">
+				<div class="item_description">
+					<div>MOTOR DRIVER</div>
+					<p class="fo">Motor drivers acts as an interface between the motors and the control circuits. Motor require high amount of current whereas the controller circuit works on low current signals. So the function of motor drivers is to take a low-current control signal and then turn it into a higher-current signal that can drive a motor.The main function of a motor driver is to provide enough electrical power to the motor to gain torque, speed as per requirement.
+                        Motor Driver can control the direction of rotation of the motor.Motor drivers can control the speed of the motor.</p>
+				</div>
+				<div class="item_name item10"></div>
+			</div>
+            <div class="item">
+				<div class="item_name item11"></div>
+				<div class="item_description">
+					<div>RF TRANSMITTER AND RECEIVER</div>
+					<p class="fo">The RF transmitter receives serial data and transmits it wirelessly through through its RF antenna. The transmission occurs at the rate of 1 Kbps – 10 Kbps. RF receiver receives the transmitted data and it is operating at the same frequency as that of the transmitter.</p>
+				</div>
+			</div>
+            <div class="item">
+				<div class="item_description">
+					<div>BREAD BOARD</div>
+					<p class="fo">A breadboard, solderless breadboard, protoboard, or terminal array board is a construction base used to build semi-permanent prototypes of electronic circuits. Unlike stripboard (Veroboard), breadboards do not require soldering or destruction to tracks and are hence reusable. For this reason, breadboards are also popular with students and in technological education.<br>
+                        The emitter is simply an IR LED (Light Emitting Diode) and the detector is simply an IR photodiode . Photodiode is sensitive to IR light of the same wavelength which is emitted by the IR LED. When IR light falls on the photodiode, the resistances and the output voltages will change in proportion to the magnitude of the IR light received.</p>
+				</div>
+				<div class="item_name item12"></div>
+			</div>
+		</section>
+		<section id="circuit">
+			<h1 class="heading">circuit diagram and code</h1>
+			<div id="circuit_diagram_and_code">
+			<div class="circuit_diagram">
+				<a class="circuit1" href="images/wheel_chair_circuit1.png"><p id="about">Circuit diagram at receiver side for appliances control</p></a>
+				<a class="circuit2" href="images/wheel_chair_circuit2.png"><p id="about">Circuit diagram at wheel chair for health monitoring</p></a>
+				<a class="circuit3" href="images/wheel_chair_circuit3.png"><p id="about">Circuit diagram at wheel chair</p></a>
+			</div>
+			<div class="code">
+				<h1>code</h1>
+				<p>
+					<h4>CODE USED IN TRANSMITTER SIDE OF ARDUINO</h4><br>
+#include <SoftwareSerial.h><br>
+#include "VoiceRecognitionV3.h"<br>
+#include <VirtualWire.h><br>
+char *data;<br>
+int LeftMotorForward = 5;<br>
+int RightMotorForward = 7;<br>
+int LeftMotorBackward = 6;<br>
+int RightMotorBackward = 8;<br>
+int speed1;<br>
+const int trigPin = 10;<br>
+const int echoPin = 11;<br>
+long duration;<br>
+int distance;<br>
+/*<br>
+Connection Arduino VoiceRecognitionModule<br>
+2 -------> TX<br>
+3 -------> RX<br>
+*/<br>
+VR myVR(2,3); // 2:TX 3:RX, you can choose your favourite pins.<br>
+uint8_t records[7]; // save record<br>
+uint8_t buf[64];<br>
+#define forward (0)<br>
+#define backward (1)<br>
+#define right (2)<br>
+#define left (3)<br>
+#define stopp (4)<br>
+#define turnon (5)<br>
+#define off (6)<br>
+void printSignature(uint8_t *buf, int len)<br>
+{<br>
+int i;<br>
+for(i=0; i<len; i++){ <br>
+if(buf[i]>0x19 && buf[i]<0x7F){<br>
+Serial.write(buf[i]);<br>
+}<br>
+else{<br>
+Serial.print("[");<br>
+Serial.print(buf[i], HEX);<br>
+Serial.print("]");<br>
+}<br>
+}<br>
+}<br>
+void printVR(uint8_t *buf)<br>
+{<br>
+Serial.println("VR Index\tGroup\tRecordNum\tSignature");<br>
+Serial.print(buf[2], DEC);<br>
+Serial.print("\t\t");<br>
+if(buf[0] == 0xFF){<br>
+Serial.print("NONE");<br>
+}<br>
+else if(buf[0]&0x80){<br>
+Serial.print("UG ");<br>
+Serial.print(buf[0]&(~0x80), DEC);<br>
+}<br>
+else{<br>
+Serial.print("SG ");<br>
+Serial.print(buf[0], DEC);<br>
+}<br>
+Serial.print("\t");<br>
+Serial.print(buf[1], DEC);<br>
+Serial.print("\t\t");<br>
+if(buf[3]>0){<br>
+printSignature(buf+4, buf[3]);<br>
+}<br>
+else{<br>
+Serial.print("NONE");<br>
+}<br>
+Serial.println("\r\n");<br>
+}<br>
+void setup()<br>
+{<br>
+/ initialize */<br>
+myVR.begin(9600);<br>
+vw_set_tx_pin(12);<br>
+vw_setup(2000);<br>
+pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output<br>
+pinMode(echoPin, INPUT);<br>
+pinMode(LeftMotorForward, OUTPUT);<br>
+pinMode(RightMotorForward, OUTPUT);<br>
+pinMode(LeftMotorBackward, OUTPUT);<br>
+pinMode(RightMotorBackward, OUTPUT);<br>
+digitalWrite(LeftMotorBackward, LOW);<br>
+digitalWrite(RightMotorBackward, LOW);<br>
+digitalWrite(LeftMotorForward, LOW);<br>
+digitalWrite(RightMotorForward, LOW);<br>
+Serial.begin(115200);<br>
+Serial.println("Elechouse Voice Recognition V3 Module\r\nControl LED sample");<br>
+if(myVR.clear() == 0){<br>
+Serial.println("Recognizer cleared.");<br>
+}<br>
+else{<br>
+Serial.println("Not find VoiceRecognitionModule.");<br>
+Serial.println("Please check connection and restart Arduino.");<br>
+while(1);<br>
+}<br>
+if(myVR.load((uint8_t)forward) >= 0){<br>
+Serial.println("forward loaded");<br>
+}<br>
+if(myVR.load((uint8_t)backward) >= 0){<br>
+Serial.println("backward loaded");<br>
+}<br>
+if(myVR.load((uint8_t)right) >= 0){<br>
+Serial.println("right loaded");<br>
+}<br>
+if(myVR.load((uint8_t)left) >= 0){<br>
+Serial.println("left loaded");<br>
+}<br>
+if(myVR.load((uint8_t)stopp) >= 0){<br>
+Serial.println("stopp loaded");<br>
+}<br>
+if(myVR.load((uint8_t)turnon) >= 0){<br>
+Serial.println("turnon loaded");<br>
+}<br>
+if(myVR.load((uint8_t)off) >= 0){<br>
+Serial.println("off loaded");<br>
+}<br>
+}<br>
+void loop()<br>
+{<br>
+int ret;<br>
+ret = myVR.recognize(buf, 50);<br>
+digitalWrite(trigPin, LOW);<br>
+delayMicroseconds(2);<br>
+// Sets the trigPin on HIGH state for 10 micro seconds<br>
+digitalWrite(trigPin, HIGH);<br>
+delayMicroseconds(10);<br>
+digitalWrite(trigPin, LOW);<br>
+// Reads the echoPin, returns the sound wave travel time in microseconds<br>
+duration = pulseIn(echoPin, HIGH);<br>
+// Calculating the distance<br>
+distance = duration * 0.034 / 2;<br>
+if(distance <12)<br>
+{<br>
+digitalWrite(LeftMotorBackward, LOW);<br>
+digitalWrite(RightMotorBackward, LOW);<br>
+digitalWrite(LeftMotorForward, LOW);<br>
+digitalWrite(RightMotorForward, LOW);<br>
+}<br>
+if(ret>0){<br>
+switch(buf[1]){<br>
+case forward:<br>
+digitalWrite(RightMotorForward, HIGH);<br>
+digitalWrite(RightMotorBackward, LOW);<br>
+digitalWrite(LeftMotorForward, HIGH);<br>
+digitalWrite(LeftMotorBackward, LOW);<br>
+break;<br>
+case backward:<br>
+digitalWrite(RightMotorForward, LOW);<br>
+digitalWrite(RightMotorBackward, HIGH);<br>
+digitalWrite(LeftMotorForward, LOW);<br>
+digitalWrite(LeftMotorBackward, HIGH);<br>
+break;<br>
+case right:<br>
+digitalWrite(RightMotorForward, LOW);<br>
+digitalWrite(RightMotorBackward, HIGH);<br>
+digitalWrite(LeftMotorForward, HIGH);<br>
+digitalWrite(LeftMotorBackward, LOW);<br>
+break;<br>
+case left:<br>
+digitalWrite(RightMotorForward, HIGH);<br>
+digitalWrite(RightMotorBackward, LOW);<br>
+digitalWrite(LeftMotorForward, LOW);<br>
+digitalWrite(LeftMotorBackward, HIGH);<br>
+break;<br>
+case stopp:<br>
+digitalWrite(LeftMotorBackward, LOW);<br>
+digitalWrite(RightMotorBackward, LOW);<br>
+digitalWrite(LeftMotorForward, LOW);<br>
+digitalWrite(RightMotorForward, LOW);<br>
+break;<br>
+case turnon:<br>
+data="a";<br>
+vw_send((uint8_t *)data, strlen(data));<br>
+vw_wait_tx();<br>
+delay(500);<br>
+break;<br>
+case off:<br>
+data="b";<br>
+vw_send((uint8_t *)data, strlen(data));<br>
+vw_wait_tx();<br>
+delay(500);<br>
+break;<br>
+default:<br>
+Serial.println("Record function undefined");<br>
+break;<br>
+}<br>
+/** voice recognized */<br>
+printVR(buf);<br>
+}<br>
+}<br>
+<h4>CODE USED IN RECEIVING SIDE OF ARDUINO</h4><br>
+#include <VirtualWire.h><br>
+#define ledPin 6<br>
+void setup()<br>
+{<br>
+vw_set_rx_pin(11);<br>
+vw_setup(2000);<br>
+pinMode(ledPin, OUTPUT);<br>
+vw_rx_start();<br>
+}<br>
+void loop()<br>
+{<br>
+uint8_t buf[VW_MAX_MESSAGE_LEN];<br>
+uint8_t buflen = VW_MAX_MESSAGE_LEN;<br>
+if (vw_get_message(buf, &buflen)){<br>
+if(buf[0]=='a')<br>
+{<br>
+digitalWrite(ledPin,HIGH);<br>
+}<br>
+else if(buf[0]=='b')<br>
+{<br>
+digitalWrite(ledPin,LOW);<br>
+}<br>
+}<br>
+}<br>
+<h4>CODE USED IN NODE MCU (LM35 AND FLAME SENSOR)</h4><br>
+#define BLYNK_TEMPLATE_ID "TMPLHqYkB4Mk"<br>
+#define BLYNK_TEMPLATE_NAME "fire and body temperature"<br>
+#define BLYNK_AUTH_TOKEN "vW6Op23uJ5lFAqeiZtKx9Q-9ZYnQAcvn"<br>
+#include <ESP8266WiFi.h><br>
+#define BLYNK_PRINT Serial<br>
+#include <BlynkSimpleEsp8266.h><br>
+char auth[] = BLYNK_AUTH_TOKEN;<br>
+char ssid[] = "******"; // type your wifi name<br>
+char pass[] = "********";<br>
+float temp_val;<br>
+const int flamepin = D0;<br>
+int flame = HIGH;<br>
+WidgetLED led1(V1);<br>
+void setup() {<br>
+Serial.begin(115200);<br>
+Blynk.begin(auth, ssid, pass);<br>
+pinMode(flamepin, INPUT);<br>
+}<br>
+void loop() {<br>
+temp_val = (analogRead(A0) * (3.3/1023) * 80); /* Convert adc value to<br>
+equivalent voltage */<br>
+Serial.print("Temperature = ");<br>
+Serial.print(temp_val);<br>
+Blynk.virtualWrite(V0,temp_val);<br>
+Serial.print(" Degree Celsius\n");<br>
+if(temp_val > 29){<br>
+Blynk.email("test@gmail.com", "Alert", "temperature Detected!");<br>
+Blynk.logEvent("body_temperature","temperature Detected");<br>
+}<br>
+flame = digitalRead(flamepin);// read FLAME sensor<br>
+if(flame == LOW)<br>
+{<br>
+Serial.println("Fire! Fire!");<br>
+Blynk.email("test@gmail.com", "Alert", "fire Detected!");<br>
+Blynk.logEvent("fire_alarm","fire Detected");<br>
+led1.on();<br>
+}else{<br>
+Serial.println("Peace");<br>
+led1.off();<br>
+}<br>
+delay(2000);<br>
+Blynk.run();<br>
+}<br>
+<h4>CODE USED IN NODE MCU (MAX30100)</h4><br>
+#define BLYNK_TEMPLATE_ID "TMPLaETIbBUq"<br>
+#define BLYNK_TEMPLATE_NAME "healths"<br>
+#define BLYNK_AUTH_TOKEN "FMwRwATmM7jR8J80wF8zqV20Si3OT5Ng"<br>
+#include <Wire.h><br>
+#include "MAX30100_PulseOximeter.h"<br>
+#include <ESP8266WiFi.h><br>
+#define BLYNK_PRINT Serial<br>
+#include <BlynkSimpleEsp8266.h><br>
+
+#define REPORTING_PERIOD_MS 1000<br>
+PulseOximeter pox;<br>
+uint32_t tsLastReport = 0;<br>
+char auth[] = BLYNK_AUTH_TOKEN;<br>
+char ssid[] = "*****; // type your wifi name<br>
+char pass[] = "*******";<br>
+void onBeatDetected() {<br>
+Serial.println("Beat!");<br>
+}<br>
+void setup() {<br>
+Serial.begin(115200);<br>
+Blynk.begin(auth, ssid, pass);<br>
+Serial.println("Initializing pulse oximeter..");<br>
+if (!pox.begin()) {<br>
+Serial.println("FAILED");<br>
+} else {<br>
+Serial.println("SUCCESS");<br>
+}<br>
+pox.setIRLedCurrent(MAX30100_LED_CURR_7_6MA);<br>
+pox.setOnBeatDetectedCallback(onBeatDetected);<br>
+}<br>
+void loop() {<br>
+pox.update();<br>
+if (millis() - tsLastReport > REPORTING_PERIOD_MS)<br>
+{<br>
+int h = pox.getHeartRate();<br>
+Serial.print("Heart rate:");<br>
+Serial.print(h);<br>
+int b =pox.getSpO2();<br>
+Serial.print("bpm / SpO2:");<br>
+Serial.print(b);<br>
+Serial.println("%");<br>
+Blynk.virtualWrite(V0,h);<br>
+if(pox.getHeartRate()> 90){<br>
+Blynk.email("test@gmail.com", "Alert", "heart rate Detected!");<br>
+Blynk.logEvent("heart_rate","heart rate Detected");<br>
+}<br>
+Blynk.virtualWrite(V1, b);<br>
+if(pox.getSpO2()> 90){<br>
+Blynk.email("test@gmail.com", "Alert", "blood oxygen Detected!");<br>
+Blynk.logEvent("blood_oxygen","blood oxygen Detected");<br>
+}<br>
+Blynk.run();<br>
+tsLastReport = millis();<br>
+}<br>
+}<br>
+				</p>
+			</div>
+			</div>
+		</section>
+		<section id="working">
+			<h1 class="heading">working</h1>
+			<div id="working_video_and_working">
+			<div class="videos">
+				<video controls height="300" width="400">
+			        <source src="videos/wheel_chair.mp4" type="video/mp4">
+				       browser doesn't support video format
+		        </video>
+			</div>
+			<div class="working_text">
+				<p class="fo">
+					These wheelchairs can be manually or electrically driven; basic electric wheelchairs can be driven by joystick and voice commands, 
+					but people suffering from quadriplegia can't operate the wheelchair through a joystick. Our designed wheelchair is used through voice commands. 
+					The wheelchair we designed includes an automatic obstacle detection system with an ultrasonic sensor. If the person is in a fire accident, 
+					the sensor detects the fire and sends notifications to a caretaker. This wheelchair will also monitor the person's health condition, like heart rate,
+					 internal body temperature, and blood oxygen level. We incorporated a MAX30100 pulse oximeter heart rate sensor to determine heart rate and blood oxygen levels.
+					  We can determine the interior body temperature with an LM35 sensor. If the pulse and body temperature are not in normal conditions, 
+					  it will send notifications and alerts to their caretakers using the Blynk app. In every fire mishap, an IR flame sensor module detects the fire. 
+					  The person in the wheelchair can automatically control the room appliances by the commands provided by the user through the RF transmitter and receiver module. 
+					  Therefore, the evolved health monitoring and alerting smart wheelchairs can help the physically disabled and older people
+				</p>
+			</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

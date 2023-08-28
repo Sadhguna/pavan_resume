@@ -127,20 +127,20 @@ section:nth-child(2n+1){
 	width: 12rem;
 	background-color: #b9b9b9;	
 	border-radius: 1.5rem;
-	margin: 50px 100px;
+	margin: 50px 60px;
 	overflow: hidden;
 	box-shadow: 1px 1px 5px 2px #989882 inset;
 }
 #inner_div1{
-	width: 30%;
+	width: 20%;
 	height: inherit;
 	background-color: #2857a4;
 	box-shadow: 1px 1px 5px 2px #989882;
 }
 #skill_name span{
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	color: white;
-	margin-top: 10px;
+	/* margin-top: 100px; */
 	margin-left: 7px;
 }
 .outer_div>div{
@@ -153,7 +153,7 @@ section:nth-child(2n+1){
 	box-shadow: 1px 1px 5px 2px #989882;
 }
 #inner_div3{
-	width: 30%;
+	width: 20%;
 	height: inherit;
 	background-color: #2857a4;
     box-shadow: 1px 1px 5px 2px #989882;	
@@ -171,9 +171,21 @@ section:nth-child(2n+1){
     box-shadow: 1px 1px 5px 2px #989882;	
 }
 #inner_div6{
-	width: 50%;
+	width: 60%;
 	height: inherit;
 	background-color: #0b8176;
+    box-shadow: 1px 1px 5px 2px #989882;	
+}
+#inner_div7{
+	width: 70%;
+	height: inherit;
+	background-color: #4219a1;
+    box-shadow: 1px 1px 5px 2px #989882;	
+}
+#inner_div8{
+	width: 60%;
+	height: inherit;
+	background-color: #538e0c;
     box-shadow: 1px 1px 5px 2px #989882;	
 }
 .timeline{
@@ -285,6 +297,7 @@ section:nth-child(2n+1){
     background-repeat: no-repeat;
     position: relative;
 }
+
 .project_box img {
     width: 100%;
     height: 100%;
@@ -384,7 +397,7 @@ section:nth-child(2n+1){
 .certificate_box:hover {
     box-shadow: 0 0 20px #74ADC8;
 }
-#certificate_box1{
+/* #certificate_box1{
 	height: 0;
 	width: 0;
 	top: 0;
@@ -443,8 +456,8 @@ section:nth-child(2n+1){
 	position: fixed;
 	overflow: scroll;
 	transition: all 1s ease-in-out;
-}
-#certificate_box1:target{
+} */
+/* #certificate_box1:target{
 	height: 80%;
 	width: 80%;
 	top: 10%;
@@ -480,7 +493,7 @@ section:nth-child(2n+1){
 	width: 80%;
 	top: 10%;
 	left: 15%;
-}
+} */
 #mycontact{
 	height: auto;
 	font-size: 2rem;

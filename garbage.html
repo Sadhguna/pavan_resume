@@ -60,7 +60,6 @@
 				</div>
 			</div>
 			<div class="item">
-				
 				<div class="item_description">
 					<div>BREAD BOARD</div>
 					<p class="fo">A breadboard, solderless breadboard, protoboard, or terminal array board is a construction base used to build semi-permanent prototypes of electronic circuits. Unlike stripboard (Veroboard), breadboards do not require soldering or destruction to tracks and are hence reusable. For this reason, breadboards are also popular with students and in technological education.<br>
@@ -117,7 +116,6 @@
 				<h1>code</h1>
 				<p>
 					char t;<br>
- 
 void setup() {<br>
 pinMode(13,OUTPUT);   //left motors forward<br>
 pinMode(12,OUTPUT);   //left motors reverse<br>
@@ -126,15 +124,12 @@ pinMode(10,OUTPUT);   //right motors reverse<br>
 pinMode(9,OUTPUT);   //conveyor belt<br>
 pinMode(8,OUTPUT);  //conveyor belt<br>
 Serial.begin(9600);<br>
- 
 }<br>
- 
 void loop() {<br>
 if(Serial.available()){<br>
   t = Serial.read();<br>
   Serial.println(t);<br>
 }<br>
- 
 if(t == 'F'){ //move forward(all motors rotate in forward direction)<br>
   digitalWrite(13,HIGH);<br>
   digitalWrite(11,HIGH);<br>
